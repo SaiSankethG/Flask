@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block title %}Login{% endblock title %}
+{% block heading %}Login Page{% endblock heading %}
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+            <div class="flash-message">{{ msg }}</div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <form action="#" method="POST">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name"></input>
+        <input type="submit" value="Submit"></input>
+    </form>
+{% endblock content %}
